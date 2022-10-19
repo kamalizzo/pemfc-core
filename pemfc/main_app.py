@@ -38,9 +38,11 @@ def main(settings=None):
 
 
 if __name__ == "__main__":
-    base_dir = \
-        os.path.dirname(os.path.abspath(inspect.getsourcefile(lambda: 0)))
-    with open(os.path.join(base_dir, 'settings', 'settings.json')) as file:
+    # base_dir = \
+    #    os.path.dirname(os.path.abspath(inspect.getsourcefile(lambda: 0)))
+    base_dir = 'ZBT/pemfc-core/pemfc/settings/setting.json'
+    # with open(os.path.join(base_dir, 'settings', 'settings.json')) as file:
+    with open(base_dir) as file:
         settings = json.load(file)
     # settings = input_dicts.sim_dict
     # with open(os.path.join(base_dir, 'settings', 'settings.json'), 'w') as file:
